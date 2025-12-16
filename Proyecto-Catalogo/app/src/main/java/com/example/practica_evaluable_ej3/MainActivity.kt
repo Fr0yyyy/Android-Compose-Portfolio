@@ -33,7 +33,7 @@ import kotlinx.coroutines.delay
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Habilita el renderizado edge-to-edge para una UI más inmersiva.
+        // Se ve mejor con el edge to edge.
         enableEdgeToEdge()
         setContent {
             Practica_Evaluable_Ej3Theme {
@@ -43,8 +43,8 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-// Modelo de datos para representar un curso.
-// Se utiliza una data class para obtener `equals`, `hashCode`, etc., de forma automática.
+// Modelo de datos usado para representar un curso.
+// Mejor  una data class para obtener `equals`, `hashCode`, etc., de forma automática.
 data class Course(
     val title: String,
     val level: String,
@@ -68,7 +68,7 @@ val courses = listOf(
 @Composable
 fun CatalogApp() {
     val context = LocalContext.current
-    // Scaffold proporciona la estructura básica de Material Design (TopAppBar, etc.).
+    // Estructura básica de Material Design (TopAppBar, etc.).
     Scaffold(
         topBar = {
             TopAppBar(
