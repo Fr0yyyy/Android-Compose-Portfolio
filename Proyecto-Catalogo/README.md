@@ -14,11 +14,9 @@ Este proyecto es una aplicación de Android sencilla desarrollada con Jetpack Co
 *   **Arquitectura Sencilla:** El código está estructurado de forma clara, separando el modelo de datos (`Course`), la fuente de datos (lista de ejemplo) y los componentes de la UI.
 
 ## Vista Pre
-via
 
-Aquí hay una captura de pantalla de la aplicación en funcionamiento:
+<img width="363" height="811" alt="image" src="https://github.com/user-attachments/assets/0a428d3e-c7e8-4154-9455-e38ab4908c0c" />
 
-*(Aquí iría una captura de pantalla de la aplicación, por ejemplo `screenshot.png`)*
 
 ## Estructura del Proyecto
 
