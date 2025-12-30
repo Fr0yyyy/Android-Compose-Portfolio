@@ -30,17 +30,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ToDoListAppTheme {
-                Scaffold(
-                    topBar = {
-                        // Aquí crearemos nuestra barra superior
-                        TopAppBar(title = { Text("Lista de tareas") })
-                    }
-                ) { innerPadding ->
+                Screen (viewModel = taskViewModel)
 
-                    Box(modifier = Modifier.padding(innerPadding)) {
-                        Screen(viewModel = taskViewModel)}
-                }
             }
         }
     }
 }
+
