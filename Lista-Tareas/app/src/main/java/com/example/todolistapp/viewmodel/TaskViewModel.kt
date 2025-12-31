@@ -5,7 +5,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.example.todolistapp.model.Task
+import com.example.todolistapp.data.Task
+import java.util.UUID
 
 class TaskViewModel : ViewModel() {
 
@@ -22,7 +23,7 @@ class TaskViewModel : ViewModel() {
     }
 
     //Función para cambiar el texto de la nueva tarea
-    fun newTaskTextChange(text: String) {
+    fun onNewTaskTextChange(text: String) {
         newTaskText = text
     }
 
@@ -35,8 +36,8 @@ class TaskViewModel : ViewModel() {
     }
 
     //Función para eliminar una tarea
-    fun removeTask(taskToRemove: Task) {
-        tasks = tasks - taskToRemove
+    fun removeTask(taskToRemoveId: UUID) {
+        tasks = tasks.filter { it.id != taskToRemoveId }
     }
 
     //Función para marcar una tarea como completada

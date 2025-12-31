@@ -1,4 +1,4 @@
-package com.example.todolistapp.model
+package com.example.todolistapp.data
 
 import java.util.UUID
 
