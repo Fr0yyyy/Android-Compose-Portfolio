@@ -22,6 +22,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
@@ -60,7 +61,8 @@ fun TaskItem(
             IconButton(onClick = onRemoveTask) {
                 Icon(
                     imageVector = Icons.Default.Delete,
-                    contentDescription = "Borrar tarea"
+                    contentDescription = "Borrar tarea",
+                    tint = MaterialTheme.colorScheme.error
                 )
             }
         }
@@ -83,29 +85,15 @@ fun Screen(viewModel: TaskViewModel) {
                         IconButton(onClick = { viewModel.removeTaskCompleted() }) {
                             Icon(
                                 imageVector = Icons.Default.Delete,
-                                contentDescription = "Borrar tareas completadas"
+                                contentDescription = "Borrar tareas completadas",
+
                             )
                         }
                     }
                 }
             )
         },
-        bottomBar = {
-            // CAMBIO: El botón de borrar ahora está en la BottomBar
-            // Usamos el estado del ViewModel que deberías haber creado (showClearCompletedButton)
-            if (viewModel.showClearCompletedButton) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(16.dp),
-                    horizontalArrangement = Arrangement.Center
-                ) {
-                    Button(onClick = { viewModel.removeTaskCompleted() }) {
-                        Text("Borrar completadas")
-                    }
-                }
-            }
-        }
+
     ) { innerPadding ->
         Column(
             modifier = Modifier
