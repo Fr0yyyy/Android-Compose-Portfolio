@@ -4,7 +4,8 @@ Este proyecto es una aplicación de lista de tareas (To-Do List) desarrollada pa
 
 ## 📷 App en funcionamiento
 
-**
+![ToDoListApp (1)](https://github.com/user-attachments/assets/70c36af3-6b84-4e0b-825d-e43d3095b94f)
+
 
 
 
@@ -72,7 +73,7 @@ Este enfoque es fundamental para que Jetpack Compose detecte los cambios de esta
 
 ## 🔮 Futuras Mejoras
 
-Este proyecto es una base sólida. Algunas mejoras que se podrían implementar son:
+El objetivo de este proyecto es ser una base sólida. Algunas mejoras que se podrían implementar son:
 - **Persistencia de Datos**: Utilizar **Room** o **DataStore** para que las tareas se guarden localmente y no se pierdan al cerrar la aplicación.
 - **Inyección de Dependencias**: Integrar **Hilt** para gestionar las dependencias de forma más robusta y facilitar las pruebas.
 - **Pruebas Unitarias y de UI**: Añadir pruebas unitarias para el `ViewModel` y pruebas de instrumentación para la UI con Compose.
