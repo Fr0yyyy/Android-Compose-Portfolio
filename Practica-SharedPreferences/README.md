@@ -8,6 +8,7 @@ El objetivo principal de este proyecto es mostrar una implementación limpia y m
 
 ## Capturas de Pantalla
 
+![PracticaSharedPreferences](https://github.com/user-attachments/assets/cccea9a1-6958-4952-a725-51cd75f619af)
 
 ## Características Implementadas
 
