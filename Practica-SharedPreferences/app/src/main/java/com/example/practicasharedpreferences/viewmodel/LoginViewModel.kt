@@ -17,9 +17,8 @@ import kotlinx.coroutines.withContext
 data class LoginUiState(
     val username: String = "", //Valor por defecto vacío
     val password: String = ""
-)
+) //A diferencia de Live Data, State Flow obliga a dar parámetros iniciales.
 
-//Necesario pasar el repositorio como parámetro al ViewModel para poder acceder a sus métodos
 class LoginViewModel(application: Application) : AndroidViewModel(application){
 
     //Repositorio para acceder a las preferencias de usuario.

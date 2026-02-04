@@ -43,12 +43,13 @@ fun LogInScreen(navController: NavController) { //Necesita pasarle el NavControl
     val viewModel: LoginViewModel = viewModel()
 
     //Obtiene el estado de la UI desde el ViewModel
-    val uiState by viewModel.uiState.collectAsState()
+    val uiState by viewModel.uiState.collectAsState() //Para reaccionar ante los cambios de estado del ViewModel (Usuario -> _uiState -> uiState)
 
     val scope = rememberCoroutineScope() //Lanzador de tareas en segundo plano
 
 
-    val snackbarHostState = remember { SnackbarHostState() } //remember para que no se pierda el estado del snackbarHostState
+    val snackbarHostState =
+        remember { SnackbarHostState() } //remember para que no se pierda el estado del snackbarHostState
 
 
 
